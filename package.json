@@ -1,0 +1,26 @@
+{
+  "name": "allotissement-test",
+  "version": "0.0.1",
+  "description": "projet d'allotissement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rorkal/allotissement-test.git"
+  },
+  "author": "Alexandre HAMON",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rorkal/allotissement-test/issues"
+  },
+  "homepage": "https://github.com/Rorkal/allotissement-test#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
