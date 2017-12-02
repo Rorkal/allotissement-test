@@ -1,9 +1,11 @@
 'use strict';
 
+var allotissement = require('../services/allotissementService');
+
 exports.ok = function (req, res) {
     res.json('OK');
 };
 
 exports.allotir = function (req, res) {
-    res.json('Allotir ' + req.params.lots);
+    res.json(allotissement.allotir(req.params.lots));
 };
