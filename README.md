@@ -3,7 +3,7 @@
 Projet exposant un webservice d'allotissement.
 
 ## Outils requis
- * [Nodejs.org](https://nodejs.org/en/download/)
+ * [Nodejs](https://nodejs.org/en/download/)
 
 ## Procédure d'installation
 
@@ -15,7 +15,9 @@ Projet exposant un webservice d'allotissement.
 
 1. Exécuter la commande `npm start` pour lancer le server.
  
-2. Interroger l'URL <http://localhost:3000/allotissement/123456789> avec vos numéros de lots pour obtenir en réponse l'allotissement.
+2. Interroger l'URL <http://IP_SERVEUR:3000/allotissement/ARTICLES> où:
+    * IP_SERVEUR : l'IP du serveur sur lequel est installé le service
+    * NO_LOT : La liste d'articles à allotir (par exemple 123456789)
 
 ## Lancement du serveur en mode de développement
 
