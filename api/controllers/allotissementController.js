@@ -7,5 +7,12 @@ exports.ok = function (req, res) {
 };
 
 exports.allotir = function (req, res) {
-    res.json(allotissement.allotir(req.params.lots));
+    var valeurRetour;
+    try {
+        valeurRetour = allotissement.allotir(req.params.lots);
+    } catch(e){
+        valeurRetour = e;
+        res.status(400);
+    }
+    res.json(valeurRetour);
 };
