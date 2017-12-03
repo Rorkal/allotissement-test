@@ -4,6 +4,11 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
 exports.allotir = function (lots) {
 
+    var regexp = new RegExp("^[1-9]*$");
+    if (!regexp.test(lots)){
+        throw lots + ' ne respecte pas l\'expression régulière "^[1-9]*$"';
+    }
+
     var arrayLots = [];
     var arrayLotsAllotis = [];
 
@@ -34,5 +39,20 @@ exports.allotir = function (lots) {
         }
     }
 
-    return arrayLotsAllotis;
+    // on formatte la sortie
+    var lotsAllotisAsString = '';
+    while (arrayLotsAllotis.length > 0) {
+        // On dépile les lots
+        var lot = arrayLotsAllotis.shift();
+        while (lot.length > 0) {
+            // On dépile les articles
+            lotsAllotisAsString += lot.shift();
+        }
+        if (arrayLotsAllotis.length > 0){
+            // Séparateur de lots
+            lotsAllotisAsString += '/';
+        }
+    }
+
+    return lotsAllotisAsString;
 }
